@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: Dolphins;
+  src: url("./fonts/dolphins.ttf") format("truetype");
+}
+
+.header-title {
+  font-family: Dolphins;
+  color: #FFF
+}
+
