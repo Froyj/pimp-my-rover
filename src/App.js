@@ -1,14 +1,22 @@
-
-import RoverPage from './components/RoverPage';
-
-import './App.css';
+import { useReducer } from 'react';
 import Layout from './components/Layout';
-import CustomizationPanel from './components/CustomizationPanel';
+import CustomizationContext from './context/CustomizationContext';
+import customizationReducer from './reducers/customization';
+import './App.css';
 
 function App() {
+  const initialState = {
+    selectedColor: '#000000',
+    selectedTexture: null,
+
+  }
+  const [state, dispatch] = useReducer(customizationReducer, initialState);
+
   return (
     <div className='App'>
-      <Layout />
+      <CustomizationContext.Provider value={{ state, dispatch }}>
+        <Layout />
+      </CustomizationContext.Provider>
     </div>
   );
 }

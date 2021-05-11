@@ -1,4 +1,3 @@
-import { Box } from "@material-ui/core";
 import RoverScene from "./RoverScene";
 import Stats from "./Stats";
 
